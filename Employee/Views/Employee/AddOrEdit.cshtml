@@ -1,0 +1,67 @@
+﻿@model Employee.Models.EmployeeModel
+
+@{ Layout = null; }
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="AddOrEdit" asp-route-id="@Model.EmployeeID" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EmployeeID" />
+            <input type="hidden" asp-for="Date" />
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="EmployeeFirstName" class="control-label"></label>
+                        <input asp-for="EmployeeFirstName" class="form-control" />
+                        <span asp-validation-for="EmployeeFirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="EmployeeLastName" class="control-label"></label>
+                        <input asp-for="EmployeeLastName" class="form-control" />
+                        <span asp-validation-for="EmployeeLastName" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="EmployeePhone" class="control-label"></label>
+                        <input asp-for="EmployeePhone" mask="(999) 999-9999" class="form-control" />
+                        <span asp-validation-for="EmployeePhone" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="EmployeeZip" class="control-label"></label>
+                        <input asp-for="EmployeeZip" class="form-control" />
+                        <span asp-validation-for="EmployeeZip" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="HireDate" class="control-label"></label>
+                        <input asp-for="HireDate" class="form-control" />
+                        <span asp-validation-for="HireDate" class="text-danger"></span>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6 offset-md-3">
+                        <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+

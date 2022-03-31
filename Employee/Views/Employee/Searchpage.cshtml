@@ -1,0 +1,10 @@
+﻿@{ ViewData["Title"] = "Search"; }
+<h1>@ViewData["Title"]</h1>
+
+<div id="search">
+    @await Html.PartialAsync("Search", new EmployeeSearchViewModel())
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

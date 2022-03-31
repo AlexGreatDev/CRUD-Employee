@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Employee.Models.EmployeeModel>
+
+<div class="col-md-8 offset-md-2">
+
+
+    <h1 class="text-center">Employee List</h1>
+
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeePhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HireDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Employee",null,Context.Request.Scheme)','New Employee')" class="btn btn-success text-white"><i class="fas fa-random"></i> New Employee</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.EmployeeFirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EmployeeLastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EmployeePhone)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HireDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Date)
+    </td>
+    <td>
+        <div>
+            <a onclick="showInPopup('@Url.Action("AddOrEdit","Employee",new {id=item.EmployeeID},Context.Request.Scheme)','Update Employee')" class="btn btn-info text-white"><i class="fas fa-pencil-alt"></i> Edit</a>
+            <form asp-action="Delete" asp-route-id="@item.EmployeeID" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
+                <input type="hidden" asp-for="@item.EmployeeID" />
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </form>
+        </div>
+    </td>
+</tr>
+}
+        </tbody>
+    </table>
+</div>
