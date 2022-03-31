@@ -26,8 +26,9 @@ About the application technologies and operation:
 2. EF
 
    ```
- Update-Database
+    Update-Database
    ```
+
      
 ### About the application:
 
