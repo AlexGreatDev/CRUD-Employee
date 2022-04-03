@@ -8,7 +8,7 @@ About the application technologies and operation:
 - BackEnd Side: .NET Core 3.1
 - Descriptive Language: HTML5
 - Style Description Language: CSS (Bootstrap 4.3.1)
-- Database: SQL Server | SQLite In Memory Provider (Code First Database Migration)
+- Database: SQL Server (Code First Database Migration)
 - Other :
     - Input mask
     - Search 
