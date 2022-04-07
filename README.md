@@ -1,6 +1,7 @@
 # C# - ASP.NET .NET Core MVC - Simple CRUD Example Application .
 
 About the application technologies and operation:
+other my  repo with N-tire : https://github.com/AlexGreatDev/CRUD-N-tier-MVC
 
 ### Technologies:
 - Programming Language: C#
