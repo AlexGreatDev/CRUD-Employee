@@ -3,6 +3,7 @@
 About the application technologies and operation:
 
 other my  repo with N-tire : https://github.com/AlexGreatDev/CRUD-N-tier-MVC
+
 other my repo with Telerik Kendo UI .NET CORE : https://github.com/AlexGreatDev/Kendo-NetCore
 ### Technologies:
 - Programming Language: C#
